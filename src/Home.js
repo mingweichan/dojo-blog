@@ -7,29 +7,23 @@ const Home = () => {
 
     const [name, setName] = useState('mario')
 
-    const handleDelete = (id) => {
-        const newBlogs = blogs.filter(blog => blog.id !== id)
-        setBlogs(newBlogs)
-    }
-
     useEffect(() => {
         fetch('http://localhost:8000/blogs')
             .then(res => {
                 return res.json()
             })
-            .then((data) => {
-                console.log(data)
+            .then(data => {
+                setBlogs(data)
             })
         console.log('use effect ran')
         }, [])
 
     return ( 
         <div className="home">
-            {/* <BlogList blogs={blogs} title="My Blogs!" handleDelete={handleDelete}/>
-            <BlogList blogs={blogs.filter((blog) => blog.author === 'mario')} title="Marios blogs" handleDelete={handleDelete} />
+            {blogs && <BlogList blogs={blogs} title={blogs.title}/>}
             <button onClick={() => setName('luigi')}>Change name</button>
-            <p>{name}</p> */}
-        </div>     
+            <p>{name}</p>
+        </div>
      );
 }
  
