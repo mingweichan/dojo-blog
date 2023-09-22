@@ -28,16 +28,15 @@
     color: #f1356d;
   }
   .content {
-    max-width: 600px;
+    max-width: 640px;
     margin: 40px auto;
-    padding: 20px;
+    align-items: center;
   }
 
   /* blog previews / list */
 .blog-preview {
-  padding: 10px 0px;
-  border-bottom: 1px solid rgb(0,0,0,.1);
-  
+  padding: 20px;  
+  margin-bottom: 16px;
 }
 .blog-preview:hover {
   background-color: rgb(0,0,0,.02);
@@ -47,4 +46,7 @@
   font-size: 20px;
   color: #f1356d;
   margin-bottom: 8px;
+}
+.blog-preview a {
+  text-decoration: none;
 }

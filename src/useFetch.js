@@ -25,6 +25,7 @@ const useFetch = (url) => {
                 })
             }, 1000)
         console.log('I fire once')
+        
     }, [url])
 
     return {data, isLoading, error}
