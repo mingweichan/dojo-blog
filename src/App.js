@@ -9,6 +9,7 @@ function App() {
   return (
     <Router>
         <div className="App">
+          <h1 className='text-3xl font-bold underline'>Hi</h1>
           <Navbar />
             <div className="content">
               <Switch>
