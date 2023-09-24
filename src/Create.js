@@ -27,31 +27,34 @@ const Create = () => {
         
     }
     return ( 
-        <div className="create">
-            <h2>Add a new blog</h2>
-            <form onSubmit={handleSubmit}>
-                <label>Blog title:</label>
+        <div className="create mt-4 w-1/3">
+            <h2 className="text-xl">Add a new blog</h2>
+            <form className= "my-4 flex flex-col" onSubmit={handleSubmit}>
+                <label className="text-xs pb-2 pt-4">Title</label>
                 <input 
+                    className="focus:border-yellow-900 focus:outline-none focus:ring-0 rounded-md border-2 border-zinc-800 bg-yellow-100"
                     type="text"
                     required
                     value={title}
                     onChange={e => setTitle(e.target.value)}
                 />
-                <label>Blog body:</label>
+                <label className="text-xs pb-2 pt-4">Body</label>
                 <textarea 
+                    className="form-input focus:border-yellow-900 focus:outline-none focus:ring-0 rounded-md border-2 border-zinc-800 bg-yellow-100"
                     required
                     value={body}
                     onChange={e => setBody(e.target.value)}
                 ></textarea>
-                <label>Blog author:</label>
+                <label className="text-xs pb-2 pt-4">Author</label>
                 <select
+                    className="form-select focus:border-yellow-900 focus:outline-none focus:ring-0  rounded-md border-2 border-zinc-800 bg-yellow-100"
                     value={author}
                     onChange={e => setAuthor(e.target.value)}
                 >
                     <option value="mario">mario</option>
                     <option value="yoshi">yoshi</option>
                 </select>
-                {!isLoading && <button>Add blog</button>}
+                {!isLoading && <button className="text-yellow-100 bg-zinc-950 rounded-xl font-semibold p-2 w-max mt-4">Post</button>}
                 {isLoading && <button disabled>Adding blog...</button>}
             </form>
         </div>

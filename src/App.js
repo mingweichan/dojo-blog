@@ -7,11 +7,12 @@ import NotFound from './NotFound';
 
 function App() {
   return (
+    
     <Router>
-        <div className="App">
-          <h1 className='text-3xl font-bold underline'>Hi</h1>
-          <Navbar />
-            <div className="content">
+        <div className="App bg-yellow-200 min-h-screen text-zinc-950 text-base ">
+          <div className="mx-96">
+            <Navbar />
+            <div className="content min-h-screen">
               <Switch>
                 <Route exact path="/">
                   <Home />
@@ -27,7 +28,8 @@ function App() {
                 </Route>
               </Switch>
             </div>
-        </div>
+          </div>
+      </div>
     </Router>
   );
 }

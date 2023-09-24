@@ -41,6 +41,12 @@
       "body": "sdfsdfsds",
       "author": "mario",
       "id": 11
+    },
+    {
+      "title": "This is interesting",
+      "body": "Wow my new blog page kinda sucks right now.... html looks so ugly without any css",
+      "author": "mario",
+      "id": 12
     }
   ]
 }

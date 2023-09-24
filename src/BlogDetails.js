@@ -16,14 +16,15 @@ const BlogDetails = () => {
     }
 
     return ( 
-        <div className="blog-details">
+        <div className="blog-details p-5 mt-4 w-full bg-yellow-100
+        rounded-2xl border-2 border-zinc-800">
             {isLoading && <div>Loading...</div>}
             {error && <div>{error}</div>}
             {blog && (
                 <article>
-                    <h2>{blog.title}</h2>
-                    <p>Written by {blog.author}</p>
-                    <div>{blog.body}</div>
+                    <h2 className='text-xl'>{blog.title}</h2>
+                    <p className='text-xs py-2'>Written by {blog.author}</p>
+                    <div className='w-full'>{blog.body}</div>
                     <button onClick={handleClick}>Delete</button>
                 </article>
             )}
