@@ -7,7 +7,6 @@ const Navbar = () => {
                 <h1 className='text-3xl text-zinc-800 font-medium'>Ming thinks</h1>
             </Link>
             <div className="links">
-                <Link to="/" className="p-8">Home</Link>
                 <Link to="/create" className="text-yellow-100 bg-zinc-950 rounded-xl font-semibold p-2">New blog</Link>
             </div>
         </nav>
